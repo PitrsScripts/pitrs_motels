@@ -3,12 +3,10 @@ Fivem - Motel Management. Hourly Rental System. Supports MLO and Shells. ESX/QBC
 
 
 # Features
-- Player Motel Business Management (change hour rates, hire employees, add / kick occupants)
 - Hourly Rental System
 - Configurable Maximum Occupants per room
 - Configurable Sharable Room Stash (stealable) or Unique per Players
 - Police can Break in using Gunshot in doors.
-- Lockpickable Doors
 - Supports MLO / Shells
 - Supports Multiple Skin resource for Wardrobes.
 - Support Targets or Zone Markers
