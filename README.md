@@ -1,7 +1,6 @@
-# renzu_motels
+# Pitrs_motels
 Fivem - Motel Management. Hourly Rental System. Supports MLO and Shells. ESX/QBCORE
 
-![image](https://user-images.githubusercontent.com/82306584/226111405-b162c926-6c00-4085-91ac-839f7ece117e.png)
 
 # Features
 - Player Motel Business Management (change hour rates, hire employees, add / kick occupants)
@@ -23,8 +22,3 @@ Fivem - Motel Management. Hourly Rental System. Supports MLO and Shells. ESX/QBC
 
 # Item name
 - keys
-
-# Todo
-```
-some features im looking to add later like Job Owneds
-```
