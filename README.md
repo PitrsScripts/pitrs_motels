@@ -20,3 +20,6 @@ Fivem - Motel Management. Hourly Rental System. Supports MLO and Shells. ESX/QBC
 
 # Item name
 - keys
+
+# To do 
+- Animations
