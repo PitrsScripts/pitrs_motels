@@ -1,15 +1,11 @@
 config = {}
 config.wardrobe = 'illenium-appearance' -- choose your skin menu
 config.target = true -- false = markers zones type. true = ox_target, qb-target
-config.autokickIfExpire = false -- auto kick occupants if rent is due. if false owner of motel must kick the occupants
+config.autokickIfExpire = true -- auto kick occupants if rent is due. if false owner of motel must kick the occupants
 config.breakinJobs = { -- jobs can break in to door using gunfire in doors
 	['police'] = true,
 	['swat'] = true,
 }
-
-
-
-
 
 config.wardrobes = { -- skin menus
 	['renzu_clothes'] = function()
@@ -32,9 +28,9 @@ config.wardrobes = { -- skin menus
 -- Shells Offsets and model name
 config.shells = {
 	['standard'] = {
-		shell = `standardmotel_shell`, -- kambi shell
+		shell = `standardmotel_shell`, -- kambi shell   
 		offsets = {
-			exit = vec3(-0.43,-2.51,1.16),
+			exit = vec3(-0.43,-2.51,1.16), 
 			stash = vec3(1.368164, -3.134506, 1.16),
 			wardrobe = vec3(1.643646, 2.551102, 1.16),
 		}
@@ -47,6 +43,14 @@ config.shells = {
 			wardrobe = vec3(2.811829, -3.619385, 0.9),
 		}
 	},
+	--['modern'] = {
+	--	shell = `modernhotel_shell`, -- kambi shell
+	--	offsets = {
+	--		exit = vec3(5.410095, 4.299301, 0.9),
+	--		stash = vec3(-4.068207, 4.046188, 0.9),
+	--		wardrobe = vec3(2.811829, -3.619385, 0.9),
+	--	}
+	--},
 }
 
 config.messageApi = function(data) -- {title,message,motel}
@@ -81,9 +85,9 @@ config.motels = {
 		manual = false, -- set the motel to auto accept occupants or false only the owner of motel can accept Occupants
 		Mlo = false, -- if MLO you need to configure each doors coordinates,stash etc. if false resource will use shells
 		shell = 'standard', -- shell type, configure only if using Mlo = true
-		label = 'Pink Cage Motel',
+		label = "Pinkcage Motel",
 		rental_period = 'day',-- hour, day, month
-		rate = 1000, -- cost per period
+		rate = 40, -- cost per period
 		businessprice = 1000000,
 		motel = 'pinkcage',
 		payment = 'money', -- money, bank
@@ -183,6 +187,199 @@ config.motels = {
 		},
 	},
 
+	[2] = { -- index name of motel
+	 	businessprice = 1000000,
+	 	manual = false, -- set the motel to auto accept occupants or false only the owner of motel can accept Occupants
+	 	Mlo = false, -- if MLO you need to configure each doors coordinates,stash etc. if false resource will use shells
+	 	shell = 'modern', -- shell type, configure only if using Mlo = true
+	 	label = "Modern Motel", -- hotel label
+     	rental_period = 'day',-- hour, day, month
+	 	payment = 'money', -- money, bank
+	 	rate = 95, -- cost per period
+	 	door = `gabz_pinkcage_doors_front`, -- door hash for MLO type
+	 	motel = 'hotelmodern3', -- hotel index name
+	 	rentcoord = vec3(497.0315, 197.6888, 104.7450),
+	 	coord = vec3(497.0315, 197.6888, 103.7450), -- center of the motel location
+	 	radius = 50.0, -- radius of motel location
+	 	maxoccupants = 5, -- maximum renters per room
+	 	uniquestash = true, -- if true. each players has unique stash ID (non sharable and non stealable). if false stash is shared to all Occupants if maxoccupans is > 1
+	 	doors = { -- doors and other function of each rooms
+	 		[1] = {
+	 			door = vec3(496.90872192383,237.74664306641,105.28434753418),
+	 			-- stash = vec3(-944.08,-1317.83,6.19),
+	 			-- wardrobe = vec3(-941.21,-1324.9,6.19),
+	 			--fridge = vec3(305.26,-206.43,54.22),
+	 			-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+	 		},
+			[2] = {
+				door = vec3(505.0700, 234.3999, 104.7444),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[3] = {
+				door = vec3(511.3797, 232.1759, 104.7432),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[4] = {
+				door = vec3(489.7852, 227.3105, 104.7443),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[5] = {
+				door = vec3(487.4524, 220.9907, 104.7440),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[6] = {
+				door = vec3(484.4190, 212.8595, 104.7442),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[7] = {
+				door = vec3(481.9785, 205.9534, 104.7447),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[8] = {
+				door = vec3(485.5992, 201.6450, 104.7449),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[9] = {
+				door = vec3(508.3739, 193.3560, 104.7450),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[10] = {
+				door = vec3(514.7704, 191.0306, 104.7450),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[11] = {
+				door = vec3(520.5651, 192.0551, 104.7448),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[12] = {
+				door = vec3(523.1487, 199.1525, 104.7441),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[13] = {
+				door = vec3(525.8939, 206.7181, 104.7436),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[14] = {
+				door = vec3(528.1638, 212.9591, 104.7443),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[15] = {
+				door = vec3(531.4755, 222.0617, 104.7448),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[16] = {
+				door = vec3(527.5092, 226.2337, 104.7447),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[17] = {
+				door = vec3(519.2582, 229.2388, 104.7441),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+            [18] = {
+				door = vec3(484.6800, 213.3748, 108.3094),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[19] = {
+				door = vec3(482.0483, 206.1513, 108.3094),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[20] = {
+				door = vec3(485.8443, 201.5661, 108.3094),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[21] = {
+				door = vec3(508.5534, 193.2910, 108.3096),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[22] = {
+				door = vec3(514.9704, 190.9563, 108.3095),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[23] = {
+				door = vec3(520.4942, 191.8840, 108.309),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+			[24] = {
+				door = vec3(523.1442, 199.1508, 108.3096),
+				-- stash = vec3(-944.08,-1317.83,6.19),
+				-- wardrobe = vec3(-941.21,-1324.9,6.19),
+				--fridge = vec3(305.26,-206.43,54.22),
+				-- luckyme = vec3(0.0,0.0,0.0) -- extra shit
+			},
+
+
+
+
+
+	 	},
+	 }
+
 }
 config.extrafunction = {
 	['bed'] = function(data,identifier)
@@ -211,6 +408,7 @@ config.Text = {
 	['bed'] = 'Spát',
 	['door'] = 'Zamknout/odemknout',
 	['exit'] = 'Odejít',
+
 }
 
 config.icons = {
@@ -220,6 +418,7 @@ config.icons = {
 	['fridge'] = 'fas fa-ice-cream',
 	['bed'] = 'fas fa-bed',
 	['exit'] = 'fas fa-door-open',
+
 }
 
 config.stashblacklist = {
