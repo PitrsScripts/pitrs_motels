@@ -23,3 +23,12 @@ Fivem - Motel Management. Hourly Rental System. Supports MLO and Shells. ESX/QBC
 
 # To do 
 - Animations
+
+#OX INVENTORY ITEMS.LUA
+```
+['keys'] = {
+		label = 'Keys Motels',
+		weight = 260,
+		stack = false,
+	},
+```
